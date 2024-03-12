@@ -5,7 +5,7 @@
 _VERSION = "0.0.1"
 
 #imports
-from __init__ import _URL,gspread,ServiceAccountCredentials,time
+from Upload import _URL,gspread,ServiceAccountCredentials,time
 
 def _GetAllFromSheet(workbook,SheetName,Retry=0):
     FailCount = 0
