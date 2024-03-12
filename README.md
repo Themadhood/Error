@@ -3,6 +3,7 @@ A Group of defs to upload Errors to a google Sheet
 
 
 need to set google sheets Workbook url by setting ErrorURL variable
+
 need to eather have a google .json named Credentals or set Credentals var with them
 
 Included
