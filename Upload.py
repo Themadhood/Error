@@ -20,19 +20,15 @@ def TestInternet():
 
 
 
+
+#url of google workbook with error sheet
+_URL = ""
+
+#credentals 
+_Credentals = {}
 _FP = os.path.dirname(os.path.abspath(__file__))
-_URL = "https://docs.google.com/spreadsheets/d/1D9sFEHfsM1UfDFXicpPkyFZiWNK7bjf6t9EVzCYWePI/edit?usp=sharing"
-_Credentals = {"type": "service_account",
-               "project_id": "errors-387223",
-               "private_key_id": "491dea1366644636c196c275a627661eda3fd9f3",
-               "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC3UGHF2YUT1CFT\nGfiUSyYnD1xXDEjdy6ZBphcIoFqLvqmJEKCMYX2pMDLts0++bRX0MrWsGKe+5BIc\naRUg3Rh2FkQny9c3uYc3LpXLme2yQ7Wj8saEL/kAswI3lSEXCsIU5AOoWpjF6r7y\n/J4r9G8CjEtM6+ge10ihR8QOn3xeX3YyKdN4vUy4Z94bLYbWNxT5+8VS9iUMg2VX\nh58pcLIzOTfeVYSX+rq3bkOMKR/rLfp9eMfIbGNwbGGOEnmjFUeyBI13PuOtYyx1\nRcFOcsEmh/rYy93IF+sAkC3G+RbtF62ZHCMXYzVtSqcp6qWaPR3N5VNtKbWPM8k0\nRt5eYdnRAgMBAAECggEACdv5lz1fz0FE9dIPNOQeEiKdDPw+2MmCyJP/GAZeWlbj\nyci+dtBpRJnQWmkfDksSD8VQsLfugTmFaRhkg9UKY1MHIUQRECjjBy5y7W1666Ah\nR0cn4s0M+Zr3IP/NBN8N8VdSZEoTnoz1rk5UkEEEPbUHmYR0YoDCEfUQ/BebNfzZ\nZJrGlK2uxLltqOParZBbT6GzmyJIkrZdaNQawbklofCTW0l13KaRHft2Tpdff0mJ\n5RpgRpAjDIKavX4ncs2G0p5CJzVbVwEsgPtOPAkzaLzZ8MkeTzIOrOzjvESl4OFb\nnEbGBMeZdHtE4V00tO+ZS5Et/5+lMAU+cVSg5qDroQKBgQDr6GRYKLgNSUhmVyyG\nJRe3a/CS/YscaoltUiaNChADIw9a6+HJtJOOLiUf5HKV2O5GjjIHzTNFam5tdvpP\nRHo74eiuRxvBoT8l/YiTJ5HFO8R1nhQKGL+3YsHpALR+AEmiofwp9//jLSBkE8vC\napxBsVqBfRck1sgKcXX0LN6Z4QKBgQDG7UNM/QPLZ22fu7krL2k1vxpfSej5SAIt\nD8u1rygCF+NIkauhD5yElu8a31HC99wNmg4Tv5673XaqampaVZoBsYkicH1MEE6H\nuaPYOxnyT9ogZe6WBhAdNkLAk1iXV+MAT6A/v9woPju2PfSTlaYCOX7Tv+aRBFvA\nY8SjMvSd8QKBgAzsMAL8SAjCSOsCP3ghtAjiKs2CggpOc7S/WUlEkdf6Ja8vWLD5\n6VNSh8oVc4lt1q+avnba8MIOsHnimJebAq8hEuPpFUYoFRN5re+RrVSGj555yFM9\nQ9NB36lp1nlIfsAf63ZJFYVWRX3176V4vZKDqpeJSKlF8rNPv8xeYNtBAoGANJJv\nvuD/J7pl1lkeTrNw8qtWpOg7keXd7VrHU3S+9g6qGnulCCPAEapx9oAec5Bdr5qP\nLdjucmfM/Kyy/rywvtHUlC12b6u/lU8SZgr4iHliBD3sF+nySEYWzh4iw5yOeX6R\ns0dZP6lyzm8BPB/Ih736LqwAm0KznNzBEwBcdYECgYBXFKd2GjtyUAmh/ht3MjzA\n/t6G4RggTLYacF9sXQHYSy1RP2kbwHzzyt46nT8PpV4Xx+drTd0sCI/YqKHyT2Os\nNUH1eXQVNJ5kCBwSIX+5tnyeL3kFIC3WOGBl4zIsYN4+vEAY/+58dxdbPbfASzzb\nsq4bN0RPiJkLA0l2t9c9Yg==\n-----END PRIVATE KEY-----\n",
-              "client_email": "error-137@errors-387223.iam.gserviceaccount.com",
-               "client_id": "116299256214128577731",
-               "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-               "token_uri": "https://oauth2.googleapis.com/token",
-               "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-               "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/error-137%40errors-387223.iam.gserviceaccount.com",
-               "universe_domain": "googleapis.com"}
+if _Credentals == {}:
+    _Credentals = f'{_FP}/Credentals.json'
 
 
 
@@ -89,7 +85,7 @@ def _UploadError(Record,sheet):
     try:
         #Login
         try:
-            gc = gspread.service_account(filename=f'{_FP}/Credentals.json')
+            gc = gspread.service_account(filename=_Credentals)
         except:
             gc = gspread.service_account_from_dict(_Credentals)
         #open work book
