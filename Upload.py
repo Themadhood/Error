@@ -22,7 +22,7 @@ def TestInternet():
 
 
 #url of google workbook with error sheet
-_URL = ""
+ErrorURL = ""
 
 #credentals 
 _Credentals = {}
@@ -89,7 +89,7 @@ def _UploadError(Record,sheet):
         except:
             gc = gspread.service_account_from_dict(_Credentals)
         #open work book
-        WorkBook = gc.open_by_url(_URL)
+        WorkBook = gc.open_by_url(ErrorURL)
         #opens Mob Sheet
         Sheeet = WorkBook.worksheet(sheet)
         #gets all records
