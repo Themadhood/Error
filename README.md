@@ -1,7 +1,8 @@
 # Themadhoods_Error_Uploader
 A Group of defs to upload Errors to a google Sheet
 
-need to hard set google sheets Workbook url in Upload.py
+
+need to set google sheets Workbook url by setting ErrorURL variable
 need to eather have a google .json named Credentals or use the info to fill in _Credentals Upload.py
 
 Included
