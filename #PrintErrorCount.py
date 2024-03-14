@@ -3,6 +3,8 @@
 #progamer:      Madison Arndt 5/8/2023
 
 _VERSION = "0.0.1"
+_URL = ""
+_credentals = "Credentals.json"
 
 #imports
 from Upload import _URL,gspread,ServiceAccountCredentials,time
@@ -47,7 +49,7 @@ def returnErrorCount(errorlist):
 
 RC_DCT = dict()
 #Login
-gc = gspread.service_account(filename="Personal.json")
+gc = gspread.service_account(filename=_credentals)
 #open work book
 WorkBook = gc.open_by_url(_URL)
 #get all sheets in work book
