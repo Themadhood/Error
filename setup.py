@@ -10,5 +10,5 @@ setup(
     author='Themadhood Pequot',
     author_email='themadhoodpequot@gmail.com',
 
-    py_modules=['__init__',"Log","Upload","TimeDefs"],
+    py_modules=['Error']#,
 )
