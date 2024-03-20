@@ -3,7 +3,7 @@ from setuptools import setup
 #from my_pip_package import __version__
 
 setup(
-    name='Error',
+    name='TPC_Error',
     version="1.0.0",#__version__,
 
     url='https://github.com/Themadhood/Error',
