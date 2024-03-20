@@ -10,5 +10,10 @@ setup(
     author='Themadhood Pequot',
     author_email='themadhoodpequot@gmail.com',
 
-    py_modules=['Error']#,
+    py_modules=['Error'],
+
+    install_requires=[
+        "gspread",#manipulates google sheets
+        "oauth2client",#logs in to google
+        "google-api-python-client",],
 )
