@@ -7,7 +7,7 @@ need to set google sheets Workbook url by setting ErrorURL variable
 need to eather have a google .json named Credentals or set Credentals var with your Credentals
 
 Included
-+ URL
++ ErrorURL
    - set url to google sheets work book
   
 + Credentals
