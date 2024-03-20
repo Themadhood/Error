@@ -7,12 +7,9 @@ need to set google sheets Workbook url by setting ErrorURL variable
 need to eather have a google .json named Credentals or set Credentals var with your Credentals
 
 Included
-+ ErrorURL
-   - set url to google sheets work book
-  
-+ Credentals
-    - set as path to a .json
-    - or set as a dict of the contets of .json
++ dict settings
+    - "URL" #set url to google sheets work book
+    - "Credentals" #set as path to a .json or #set as a dict of the contets of .json
   
 + def SecsToTime
     - takes a int or float
@@ -64,6 +61,16 @@ Included
         * Sheet name
         * Date and Time : bool = True
     - uploads to spesified Sheet name in background of program
+
+
+
+
+
+
+
+
+
+
 
 
 
