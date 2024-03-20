@@ -22,13 +22,14 @@ def TestInternet():
 
 
 #url of google workbook with error sheet
-ErrorURL = ""
+settings = {"URL":"",
 
-#credentals 
-Credentals = {}
+#credentals
+            "Credentals":{}}
+
 _FP = os.path.dirname(os.path.abspath(__file__))
-if Credentals == {}:
-    Credentals = f'{_FP}/Credentals.json'
+if settings["Credentals"] == {}:
+    settings["Credentals"] = f'{_FP}/Credentals.json'
 
 
 
@@ -85,9 +86,9 @@ def _UploadError(Record,sheet):
     try:
         #Login
         try:
-            gc = gspread.service_account(filename=Credentals)
+            gc = gspread.service_account(filename=settings["Credentals"])
         except:
-            gc = gspread.service_account_from_dict(Credentals)
+            gc = gspread.service_account_from_dict(settings["Credentals"])
         #open work book
         WorkBook = gc.open_by_url(ErrorURL)
         #opens Mob Sheet
