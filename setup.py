@@ -17,4 +17,11 @@ setup(
         "gspread",#manipulates google sheets
         "oauth2client",#logs in to google
         "google-api-python-client",],
+
+    classifiers=[
+        'Intended Audience :: Developers',
+
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+    ],
 )
