@@ -10,7 +10,7 @@ setup(
     author='Themadhood Pequot',
     author_email='themadhoodpequot@gmail.com',
 
-    packages=find_packages()
+    packages=find_packages(),
     #py_modules=['Error'],
 
     install_requires=[
