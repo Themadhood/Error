@@ -2,9 +2,6 @@ from setuptools import setup, find_packages
 
 #from my_pip_package import __version__
 
-print()
-print(find_packages())
-print()
 
 setup(
     name='TPC_Error',
