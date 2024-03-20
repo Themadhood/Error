@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 #from my_pip_package import __version__
 
@@ -10,7 +10,8 @@ setup(
     author='Themadhood Pequot',
     author_email='themadhoodpequot@gmail.com',
 
-    py_modules=['Error'],
+    packages=find_packages()
+    #py_modules=['Error'],
 
     install_requires=[
         "gspread",#manipulates google sheets
