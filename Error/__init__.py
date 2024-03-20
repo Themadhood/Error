@@ -3,9 +3,9 @@
 #progamer:      Themadhood Pequot 3/12/2024
 
 try:
-    from .Upload import *
+    from .PrintErrorCount import *
 except:
-    from Upload import *
+    from PrintErrorCount import *
 
 
 
