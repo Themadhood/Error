@@ -4,9 +4,9 @@ A Group of defs to upload Errors to a google Sheet
 
 Befor use you need to set the url and Credentals
 this can eather be done after import or by doing the folowing
-    + make folder in your lib folder called THEMADHOOD
-    + in the THEMADHOOD folder make a .py file called URLsCredentals 
-    + in the URLsCredentals.py file make and set ErrorURL,ErrorCredentals variables
++ make folder in your lib folder called THEMADHOOD
++ in the THEMADHOOD folder make a .py file called URLsCredentals 
++ in the URLsCredentals.py file make and set ErrorURL,ErrorCredentals variables
 
 Included
 + dict settings
