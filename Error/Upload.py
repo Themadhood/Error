@@ -90,7 +90,7 @@ def _UploadError(Record,sheet):
         except:
             gc = gspread.service_account_from_dict(settings["Credentals"])
         #open work book
-        WorkBook = gc.open_by_url(ErrorURL)
+        WorkBook = gc.open_by_url(settings["URL"])
         #opens Mob Sheet
         Sheeet = WorkBook.worksheet(sheet)
         #gets all records
