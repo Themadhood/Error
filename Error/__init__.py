@@ -7,7 +7,7 @@ try:
 except:
     from PrintErrorCount import *
 
-
+#alows me to set the URL & Credentals without puting them in all my sorce codes
 try:
     from THEMADHOOD.URLsCredentals import ErrorURL,ErrorCredentals
     settings["Credentals"] = ErrorCredentals
