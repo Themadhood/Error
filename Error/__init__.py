@@ -9,7 +9,7 @@ except:
 
 
 try:
-    from Themadhood.URLsCredentals import ErrorURL,ErrorCredentals
+    from THEMADHOOD.URLsCredentals import ErrorURL,ErrorCredentals
     settings["Credentals"] = ErrorCredentals
     settings["URL"] = ErrorURL
 except:
