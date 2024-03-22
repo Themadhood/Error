@@ -3,7 +3,11 @@ import Error
 
 Error.settings["URL"] = "https://docs.google.com/spreadsheets/some jumle of leters and numbers"
 Error.settings["Credentals"] = 'F:/Error_Credentals.json'
-               
+
+_FP = os.path.dirname(os.path.abspath(__file__))
+#log tests
+LogDateCheck(_FP,"Test.txt") #if dates dont match move Test.txt file
+Log("\n\n\n\n\ntt","Test.txt")
 
 try:
     startTime = Error.time.time()
