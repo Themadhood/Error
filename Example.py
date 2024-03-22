@@ -3,6 +3,12 @@ import Error
 
 Error.settings["URL"] = "https://docs.google.com/spreadsheets/some jumle of leters and numbers"
 Error.settings["Credentals"] = 'F:/Error_Credentals.json'
+#or you can
+"""
+1: make folder in your python lib folder called THEMADHOOD
+2: in the THEMADHOOD folder make a .py file called URLsCredentals
+3: in the URLsCredentals.py file make and set ErrorURL,ErrorCredentals variables
+"""
 
 _FP = os.path.dirname(os.path.abspath(__file__))
 #log tests
