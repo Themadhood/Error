@@ -8,7 +8,12 @@ except:
     from PrintErrorCount import *
 
 
-
+try:
+    from Themadhood.URLsCredentals import ErrorURL,ErrorCredentals
+    settings["Credentals"] = ErrorCredentals
+    settings["URL"] = ErrorURL
+except:
+    pass
 
 
 
