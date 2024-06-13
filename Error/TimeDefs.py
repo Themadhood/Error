@@ -1,9 +1,14 @@
-#program:       TimeDefs
-#purpose:       
-#progamer:      Themadhood Pequot 3/12/2024
+PYInfo = {"Program":    "Error.TimeDefs",
+          "Programer":  "Themadhood Pequot",
+          "Date":       "3/12/2024",
+          "Version":    "0.0.2",
+          "Update":     "documentation",
+          "Info":       "do time calculations"}
 
 #imports
 import datetime,time
+
+PYsInfo += {PYInfo["Program"]:PYInfo}
 
 
 def SecsToTime(sec):

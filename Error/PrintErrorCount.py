@@ -1,14 +1,20 @@
-#program:       PrintErrorCount
-#purpose:       Fetches records
-#progamer:      Themadhood pequot 3/20/2023
-
-_VERSION = "0.0.1"
+_PYInfo = {"Program":    "Error.PrintErrorCount",
+           "Programer":  "Themadhood Pequot",
+           "Date":       "3/12/2024",
+           "Version":    "0.0.2",
+           "Update":     "documentation",
+           "Info":       "fetches and counts errors from a google sheet then \
+prints resalts"}
 
 #imports
 try:
     from .Upload import *
 except:
     from Upload import *
+
+PYsInfo += {_PYInfo["Program"]:_PYInfo}
+PYInfo = _PYInfo
+del _PYInfo #delete extra data not needed
 
 def _GetAllFromSheet(workbook,SheetName,Retry=0):
     FailCount = 0

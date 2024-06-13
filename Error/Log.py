@@ -1,6 +1,10 @@
-#program:       Log
-#purpose:       
-#progamer:      Themadhood Pequot 3/12/2024
+_PYInfo = {"Program":    "Error.Log",
+           "Programer":  "Themadhood Pequot",
+           "Date":       "3/12/2024",
+           "Version":    "0.0.2",
+           "Update":     "documentation, VershonRecordsLog",
+           "Info":       "write info to a text document in the background of a \
+program"}
 
 #imports
 import datetime,time,os,io,shutil
@@ -10,13 +14,30 @@ try:
 except:
     from TimeDefs import *
 
-
+PYsInfo += {_PYInfo["Program"]:_PYInfo}
+PYInfo = _PYInfo
+del _PYInfo #delete extra data not needed
 
 
 global LogThredActive
 LogThredActive = False
 _Write_Log = [] #list of logs to wright
-        
+
+
+def VershonRecordsLog(pyName,msg,path="Vershon_Records"):
+    if type(msg) in [dict,list]:
+        return
+
+    Log(msg=pyName,path=path,DT=False)
+    
+    if type(msg) == dict:
+        for py in msg:
+            Log(msg=f"{py}: {msg[py]['Version']}",path=path,DT=False)
+    elif type(msg) == list:
+        while msg > []:
+            Log(msg=msg.pop(0),path=path,DT=False)
+
+    Log(msg="\n\n\n",path=path,DT=False)
 
 
 def Log(msg,path,DT=True):

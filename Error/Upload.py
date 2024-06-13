@@ -1,6 +1,9 @@
-#program:       Upload
-#purpose:       
-#progamer:      Themadhood Pequot 3/12/2024
+_PYInfo = {"Program":    "Error.Upload",
+           "Programer":  "Themadhood Pequot",
+           "Date":       "3/12/2024",
+           "Version":    "0.0.2",
+           "Update":     "documentation",
+           "Info":       "Upload errors to google sheet"}
 
 #imports
 import gspread,requests
@@ -9,6 +12,10 @@ try:
     from .Log import *
 except:
     from Log import *
+
+PYsInfo += {_PYInfo["Program"]:_PYInfo}
+PYInfo = _PYInfo
+del _PYInfo #delete extra data not needed
 
 
 def TestInternet():
