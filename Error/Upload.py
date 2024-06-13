@@ -1,9 +1,9 @@
-_PYInfo = {"Program":    "Error.Upload",
-           "Programer":  "Themadhood Pequot",
-           "Date":       "3/12/2024",
-           "Version":    "0.0.2",
-           "Update":     "documentation",
-           "Info":       "Upload errors to google sheet"}
+__Program__     = "Error.Upload"    
+__Programer__   = "Themadhood Pequot"
+__Date__        = "3/12/2024"
+__Version__     = "0.0.2"
+__Update__      = "documentation"
+__Info__        = "Upload errors to google sheet"
 
 #imports
 import gspread,requests
@@ -13,9 +13,7 @@ try:
 except:
     from Log import *
 
-PYsInfo += {_PYInfo["Program"]:_PYInfo}
-PYInfo = _PYInfo
-del _PYInfo #delete extra data not needed
+VersionLst += [f"{__Program__}: {__Version__}"]
 
 
 def TestInternet():
@@ -167,7 +165,8 @@ def _SaveErrors(Record,sheet):
      
 
 if __name__ == "__main__":#error check
-    UploadError(["Error.__init__","0.0.1","","","test",0],"Test")
+    VershonRecordsLog(pyName=__Program__,msg=VersionLst)
+    UploadError([__Program__,__version__,"","","test",0],"Test")
 
 
 

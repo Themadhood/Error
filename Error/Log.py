@@ -1,10 +1,10 @@
-_PYInfo = {"Program":    "Error.Log",
-           "Programer":  "Themadhood Pequot",
-           "Date":       "3/12/2024",
-           "Version":    "0.0.2",
-           "Update":     "documentation, VershonRecordsLog",
-           "Info":       "write info to a text document in the background of a \
-program"}
+__Program__     = "Error.Log"    
+__Programer__   = "Themadhood Pequot"
+__Date__        = "3/12/2024"
+__Version__     = "0.0.2"
+__Update__      = "documentation, VershonRecordsLog"
+__Info__        = "write info to a text document in the background of a \
+program"
 
 #imports
 import datetime,time,os,io,shutil
@@ -14,9 +14,7 @@ try:
 except:
     from TimeDefs import *
 
-PYsInfo += {_PYInfo["Program"]:_PYInfo}
-PYInfo = _PYInfo
-del _PYInfo #delete extra data not needed
+VersionLst += [f"{__Program__}: {__Version__}"]
 
 
 global LogThredActive
@@ -150,6 +148,7 @@ def LogDateCheck(filepath,filename):
         
 
 if __name__ == "__main__":
+    VershonRecordsLog(pyName=__Program__,msg=VersionLst)
     _FP = os.path.dirname(os.path.abspath(__file__))
     #log tests
     LogDateCheck(_FP,"Test.txt")

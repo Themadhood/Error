@@ -1,14 +1,14 @@
-PYInfo = {"Program":    "Error.TimeDefs",
-          "Programer":  "Themadhood Pequot",
-          "Date":       "3/12/2024",
-          "Version":    "0.0.2",
-          "Update":     "documentation",
-          "Info":       "do time calculations"}
+__Program__     = "Error.TimeDefs"    
+__Programer__   = "Themadhood Pequot"
+__Date__        = "3/12/2024"
+__Version__     = "0.0.2"
+__Update__      = "documentation"
+__Info__        = "do time calculations"
 
 #imports
 import datetime,time
 
-PYsInfo += {PYInfo["Program"]:PYInfo}
+VersionLst = [f"{__Program__}: {__Version__}"]
 
 
 def SecsToTime(sec):

@@ -1,10 +1,10 @@
-_PYInfo = {"Program":    "Error.PrintErrorCount",
-           "Programer":  "Themadhood Pequot",
-           "Date":       "3/12/2024",
-           "Version":    "0.0.2",
-           "Update":     "documentation",
-           "Info":       "fetches and counts errors from a google sheet then \
-prints resalts"}
+__Program__     = "Error.PrintErrorCount"    
+__Programer__   = "Themadhood Pequot"
+__Date__        = "3/12/2024"
+__Version__     = "0.0.2"
+__Update__      = "documentation"
+__Info__        = "fetches and counts errors from a google sheet then \
+prints resalts"
 
 #imports
 try:
@@ -12,9 +12,7 @@ try:
 except:
     from Upload import *
 
-PYsInfo += {_PYInfo["Program"]:_PYInfo}
-PYInfo = _PYInfo
-del _PYInfo #delete extra data not needed
+VersionLst += [f"{__Program__}: {__Version__}"]
 
 def _GetAllFromSheet(workbook,SheetName,Retry=0):
     FailCount = 0
@@ -83,6 +81,7 @@ def PrintErrorCount():
             print(f"Total: {total}\tDifrent: {len(RC_DCT[i])}\t{i} Errors")
 
 if __name__ == "__main__":
+    VershonRecordsLog(pyName=__Program__,msg=VersionLst)
     #settings["URL"] = 
     #settings["Credentals"] = 
 
