@@ -22,7 +22,7 @@ except:
 
 
 if __name__ == "__main__":
-    VershonRecordsLog(pyName=__Program__,msg=VersionLst)
+    VersionRecordsLog(pyName=__Program__,msg=VersionLst)
 
 
 

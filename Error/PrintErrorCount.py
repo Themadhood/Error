@@ -81,7 +81,7 @@ def PrintErrorCount():
             print(f"Total: {total}\tDifrent: {len(RC_DCT[i])}\t{i} Errors")
 
 if __name__ == "__main__":
-    VershonRecordsLog(pyName=__Program__,msg=VersionLst)
+    VersionRecordsLog(pyName=__Program__,msg=VersionLst)
     #settings["URL"] = 
     #settings["Credentals"] = 
 

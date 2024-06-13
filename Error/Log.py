@@ -22,7 +22,7 @@ LogThredActive = False
 _Write_Log = [] #list of logs to wright
 
 
-def VershonRecordsLog(pyName,msg,path="Vershon_Records.txt"):
+def VersionRecordsLog(pyName,msg,path="Vershon_Records.txt"):
     if type(msg) not in [dict,list]:
         return
 
@@ -33,7 +33,10 @@ def VershonRecordsLog(pyName,msg,path="Vershon_Records.txt"):
             Log(msg=f"{py}: {msg[py]['Version']}",path=path,DT=False)
     elif type(msg) == list:
         while msg > []:
-            Log(msg=msg.pop(0),path=path,DT=False)
+            version = msg.pop(0)
+            Log(msg=version,path=path,DT=False)
+            while version in msg:
+                msg.remove(version)
 
     Log(msg="\n\n\n ",path=path,DT=False)
 
@@ -148,7 +151,7 @@ def LogDateCheck(filepath,filename):
         
 
 if __name__ == "__main__":
-    VershonRecordsLog(pyName=__Program__,msg=VersionLst)
+    VersionRecordsLog(pyName=__Program__,msg=VersionLst)
     #_FP = os.path.dirname(os.path.abspath(__file__))
     #log tests
     #LogDateCheck(_FP,"Test.txt")
