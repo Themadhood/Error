@@ -26,7 +26,7 @@ def VershonRecordsLog(pyName,msg,path="Vershon_Records.txt"):
     if type(msg) not in [dict,list]:
         return
 
-    Log(msg=f"{pyName}\n},path=path,DT=False)
+    Log(msg=f"{pyName}\n",path=path,DT=False)
     
     if type(msg) == dict:
         for py in msg:
